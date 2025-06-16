@@ -75,6 +75,9 @@ test('6- Validate business logic for unemployed', async ({ request }) => {
     },
   )
   expect(response.status()).toBe(StatusCodes.OK)
-  const body = await response.text()
+  const body = await response.json()
   console.log(body)
+  expect(body.riskDecision, 'Unemployed applicant should not receive a positive decision').toBe(
+    'negative',
+  )
 })
