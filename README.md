@@ -13,9 +13,9 @@
 
 | #  | Scenario Description | Test Data | Expected Result |
 |----|-----------------------|-----------|-----------------|
-| 1  | **POST**: Submit a valid data parameters Positive decision | (5000, 0, 30, true, 300, 30) | `StatusCodes.OK` |
-| 2  | **POST**: Submit a valid data parameters Negative decision | (2000, 0, 30, true, 30000, 12)| `StatusCodes.BAD_REQUEST` |
-| 3  | **POST**: Submit a negative income |(-1000, 0, 30, true, 300, 30) | `StatusCodes.BAD_REQUEST` |
+| 1  | **POST**: Submit a a valid data parameters Negative decision | (100, 0, 17, true, 1000, 12) | `StatusCodes.OK`, Negative decision|
+| 2  | **POST**: Submit a valid data parameters Positive decision, Medium risk | (2000, 0, 30, true, 500, 6)| `StatusCodes.OK`,Positive decision, Medium risk|
+| 3  | **POST**: Submit a valid data parameters Positive decision, Low risk |(2000, 0, 30, true, 500, 12) | `StatusCodes.OK`, Positive decision, Low risk|
 | 4  | **POST**: Submit zero income | (0, 0, 30, true, 30000, 12) | `StatusCodes.BAD_REQUEST`|
 | 5  | **POST**: Submit non-JSON content | Content-Type: `text/plain` | `StatusCodes.UNSUPPORTED_MEDIA_TYPE` |
 | 6  | **POST**: Validate business logic for unemployed | (300, 0, 30, false, 600, 12) | `Positive risk decision`⁉️|
