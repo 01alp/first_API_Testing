@@ -6,4 +6,6 @@
 | 2  | **POST**: Submit an invalid user name and password |  | `StatusCodes.UNAUTHORIZED)`, JTW Not match|
 
 
-To test you need to Create .env file at the root directory. Login and password will be given trough Telegram
+This test runs on Github
+If you want to run locally:
+Create .env file at the root directory. Use your login credentials as in example.env.txt
