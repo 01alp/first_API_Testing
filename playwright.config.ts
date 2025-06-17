@@ -1,4 +1,7 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig } from '@playwright/test'
+import * as dotenv from 'dotenv'
+//Load .env file
+dotenv.config()
 
 export default defineConfig({
   testDir: './tests',
@@ -12,6 +15,7 @@ export default defineConfig({
   reporter: 'html',
   use: {
     trace: 'on-first-retry',
+    baseURL: process.env.BASE_URL,
   },
 
   projects: [
@@ -19,5 +23,4 @@ export default defineConfig({
       name: 'API tests',
     },
   ],
-
-});
+})
