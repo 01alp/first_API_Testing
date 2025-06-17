@@ -2,7 +2,7 @@ name: Check formatting, linting, and run tests
 
 on:
   push:
-    branches: [main, develop]
+    branches: ['**']
   pull_request:
     branches:
       - main
