@@ -5,7 +5,7 @@ import { LoginDto } from './dto/login_dto'
 const JWTPATTERN = /^eyJhb[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+\.[A-Za-z0-9-_]+$/
 const LOGINURL = 'login/student'
 test.describe('HW11 API Testing and JWT Verification', () => {
-  test('Login with correct data and verify token ', async ({ request }) => {
+  test('Login with correct data and verify token', async ({ request }) => {
     const user = LoginDto.createLoginWithCorrectData()
     console.log('userData: ', user)
     const response = await request.post(LOGINURL, {
