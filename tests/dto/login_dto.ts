@@ -5,10 +5,7 @@ export class LoginDto {
     this.username = username
     this.password = password
   }
-  static createLoginWithCorrectData(): LoginDto {
+  static createLogin(): LoginDto {
     return new LoginDto(process.env.USERNAME || '', process.env.PASSWORD || '')
-  }
-  static createLoginWithIncorrectData(): LoginDto {
-    return new LoginDto('incorrectUser', 'incorrectPass')
   }
 }
